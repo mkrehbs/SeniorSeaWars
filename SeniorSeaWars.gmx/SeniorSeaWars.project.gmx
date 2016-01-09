@@ -57,6 +57,7 @@
     <script>scripts\scr_MakePlayer.gml</script>
     <script>scripts\scr_ChooseFirstTurn.gml</script>
     <script>scripts\scr_NextTurn.gml</script>
+    <script>scripts\scr_PlayerTurn.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_Game</font>
@@ -82,8 +83,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_testing</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_testing</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
