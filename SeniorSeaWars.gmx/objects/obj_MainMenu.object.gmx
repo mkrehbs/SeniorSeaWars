@@ -87,7 +87,7 @@ if(startGame){
             <kind>1</kind>
             <string>draw_set_font(font_Game);
 
-draw_text()
+draw_text(x,y,"hi");
 </string>
           </argument>
         </arguments>
