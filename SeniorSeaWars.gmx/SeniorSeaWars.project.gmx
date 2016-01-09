@@ -78,6 +78,7 @@
     <object>objects\obj_BaseP1</object>
     <object>objects\obj_BaseP2</object>
     <object>objects\obj_Message</object>
+    <object>objects\obj_MessageAdvance</object>
     <object>objects\obj_Seaweed</object>
     <object>objects\obj_Trap</object>
   </objects>

@@ -263,7 +263,7 @@ if !place_free(x, y+vspeed) vspeed = 0}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(control.turn &amp;&amp; owenedBy == control.activePlayer){
+            <string>if(control.turn == true &amp;&amp; ownedBy == control.activePlayer){
 
     with(obj_Player){
         selected = false;

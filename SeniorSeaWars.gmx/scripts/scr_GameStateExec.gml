@@ -15,7 +15,7 @@ switch(control.gameState){
         }
     break;
     case 3:
-        with(instance_create(x,y,obj_Message)){
+        with(instance_create(x,y,obj_MessageAdvance)){
         text = string("Player "+string(scr_ChooseFirstTurn())+" is going first!");
         };
     break;
