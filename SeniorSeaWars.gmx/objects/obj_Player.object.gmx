@@ -66,46 +66,42 @@ ownedBy = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(selected){
-    
-    if (speed &gt; maxspeed)
-        speed = maxspeed;
-    
-    if (keyboard_check(ord('W'))) 
-    {
-        moving = true;
-        if (moving != moving2)
-        {
-            vspeed -= speedinc;
-        }
-    }
-    if (keyboard_check(ord('A'))) 
-    {
-        moving = true;
-        if (moving != moving2)
-        {
-            hspeed -= speedinc;
-        }
-    }
-    if (keyboard_check(ord('S')))
-    {
-        moving = true;
-        if (moving != moving2)
-        {
-            vspeed += speedinc;
-        }
-        moving = true;
-    
-    }
-    if (keyboard_check(ord('D')))
-    {
-        moving = true;
-        if (moving != moving2)
-        {
-            hspeed += speedinc;
-        }
-    }
+            <string>if (speed &gt; maxspeed)
+    speed = maxspeed;
 
+if (keyboard_check(ord('W'))) 
+{
+    moving = true;
+    if (moving != moving2)
+    {
+        vspeed -= speedinc;
+    }
+}
+if (keyboard_check(ord('A'))) 
+{
+    moving = true;
+    if (moving != moving2)
+    {
+        hspeed -= speedinc;
+    }
+}
+if (keyboard_check(ord('S')))
+{
+    moving = true;
+    if (moving != moving2)
+    {
+        vspeed += speedinc;
+    }
+    moving = true;
+
+}
+if (keyboard_check(ord('D')))
+{
+    moving = true;
+    if (moving != moving2)
+    {
+        hspeed += speedinc;
+    }
 }
 </string>
           </argument>
