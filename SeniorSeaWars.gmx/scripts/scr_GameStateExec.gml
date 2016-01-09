@@ -5,14 +5,17 @@ switch(control.gameState){
     
     case 1:
     scr_PopulateMap();
-        with(instance_create(x,y,obj_PlacePlayers)){
+        with(instance_create(spawnx[1],spawny[1],obj_PlacePlayers)){
             player = 1;
         }
     break;
     case 2:
-        with(instance_create(x,y,obj_PlacePlayers)){
+        with(instance_create(spawnx[2],spawny[2],obj_PlacePlayers)){
             player = 2;
         }
+    break;
+    case 3:
+        scr_ChooseFirstTurn();
     break;
     
     

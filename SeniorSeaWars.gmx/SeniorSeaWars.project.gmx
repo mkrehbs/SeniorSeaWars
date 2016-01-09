@@ -55,6 +55,8 @@
     </scripts>
     <script>scripts\scr_Types.gml</script>
     <script>scripts\scr_MakePlayer.gml</script>
+    <script>scripts\scr_ChooseFirstTurn.gml</script>
+    <script>scripts\scr_MakeMessage.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_Game</font>
@@ -74,6 +76,7 @@
     <object>objects\obj_Rock</object>
     <object>objects\obj_BaseP1</object>
     <object>objects\obj_BaseP2</object>
+    <object>objects\obj_Message</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>

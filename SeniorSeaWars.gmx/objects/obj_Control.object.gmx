@@ -34,6 +34,11 @@ instance_create(x,y,obj_MainMenu);
 
 //variables
 
+spawnx[1] = 64;
+spawny[1] = 64;
+spawnx[2] = 960;
+spawny[2] = 1984;
+
 gameState = 0;
 gameStatePrevious = gameState;
 win = 0;
@@ -50,7 +55,6 @@ activePlayer = 0;
 
 drawFuel = false;
 fuel = 100;
-
 
 debugging = true;
 
@@ -187,8 +191,9 @@ if(activeEntity){
 
 if(win){
 
-    show_message("GAME IS OVER :D")
+    show_message("GAME IS OVER :D");
     show_message(win);
+    game_restart();
 
 }
 </string>
