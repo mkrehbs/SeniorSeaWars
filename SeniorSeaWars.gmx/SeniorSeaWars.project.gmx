@@ -46,6 +46,8 @@
   <backgrounds name="background">
     <background>background\bck_sand</background>
     <background>background\tmp_tileset</background>
+    <background>background\background2</background>
+    <background>background\bck_sea</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
