@@ -18,6 +18,26 @@
         <sprite>sprites\spr_Crab</sprite>
       </sprites>
     </sprites>
+    <sprites name="Portraits">
+      <sprite>sprites\spr_BoxerPortrait</sprite>
+      <sprite>sprites\spr_WeakPortrait</sprite>
+      <sprite>sprites\spr_DeVutoPortrait</sprite>
+      <sprite>sprites\spr_BlobPortrait</sprite>
+      <sprite>sprites\spr_GobSharkPortrait</sprite>
+      <sprite>sprites\spr_CrabPortrait</sprite>
+    </sprites>
+    <sprites name="Terrain">
+      <sprites name="Sea">
+        <sprite>sprites\spr_Coral</sprite>
+        <sprite>sprites\spr_Seaweed</sprite>
+        <sprite>sprites\spr_Sea</sprite>
+      </sprites>
+      <sprites name="Land">
+        <sprite>sprites\spr_Rock</sprite>
+        <sprite>sprites\spr_Sand</sprite>
+        <sprite>sprites\spr_Rough</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
