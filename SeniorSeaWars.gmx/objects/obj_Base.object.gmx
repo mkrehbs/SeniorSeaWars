@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if (control.activePlayer)
+{
+    if (control.activePlayer = 1)
+        control.win = control.activePlayer;
+    
+    if (control.activePlayer = 2)
+        control.win = control.activePlayer;
+}
+</string>
           </argument>
         </arguments>
       </action>
