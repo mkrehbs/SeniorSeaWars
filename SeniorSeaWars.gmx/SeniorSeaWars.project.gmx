@@ -58,6 +58,7 @@
     <script>scripts\scr_ChooseFirstTurn.gml</script>
     <script>scripts\scr_NextTurn.gml</script>
     <script>scripts\scr_PlayerTurn.gml</script>
+    <script>scripts\scr_MatchUp.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_Game</font>
@@ -81,6 +82,7 @@
     <object>objects\obj_MessageAdvance</object>
     <object>objects\obj_Seaweed</object>
     <object>objects\obj_Trap</object>
+    <object>objects\object18</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
