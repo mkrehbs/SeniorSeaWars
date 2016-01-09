@@ -9,6 +9,7 @@ if(point_distance(mouse_x,mouse_y,spawnx,spawny) < control.spawnDist){
     
         player = other.player;
         type = other.type;
+        ownedBy = other.player;
     
     }
 

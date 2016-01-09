@@ -66,45 +66,49 @@ ownedBy = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (speed &gt; maxspeed)
-    speed = maxspeed;
+            <string>if(selected){
+
+    if (speed &gt; maxspeed)
+        speed = maxspeed;
+        
+    if (!place_meeting(x, y, obj_RoughTerrain))
+        maxspeed = 4 else maxspeed = 2;
     
-if (!place_meeting(x, y, obj_RoughTerrain))
-    maxspeed = 4 else maxspeed = 2;
+    if (keyboard_check(ord('W'))) 
+    {
+        moving = true;
+        if (moving != moving2)
+        {
+            vspeed -= speedinc;
+        }
+    }
+    if (keyboard_check(ord('A'))) 
+    {
+        moving = true;
+        if (moving != moving2)
+        {
+            hspeed -= speedinc;
+        }
+    }
+    if (keyboard_check(ord('S')))
+    {
+        moving = true;
+        if (moving != moving2)
+        {
+            vspeed += speedinc;
+        }
+        moving = true;
+    
+    }
+    if (keyboard_check(ord('D')))
+    {
+        moving = true;
+        if (moving != moving2)
+        {
+            hspeed += speedinc;
+        }
+    }
 
-if (keyboard_check(ord('W'))) 
-{
-    moving = true;
-    if (moving != moving2)
-    {
-        vspeed -= speedinc;
-    }
-}
-if (keyboard_check(ord('A'))) 
-{
-    moving = true;
-    if (moving != moving2)
-    {
-        hspeed -= speedinc;
-    }
-}
-if (keyboard_check(ord('S')))
-{
-    moving = true;
-    if (moving != moving2)
-    {
-        vspeed += speedinc;
-    }
-    moving = true;
-
-}
-if (keyboard_check(ord('D')))
-{
-    moving = true;
-    if (moving != moving2)
-    {
-        hspeed += speedinc;
-    }
 }
 </string>
           </argument>
@@ -270,6 +274,7 @@ if !place_free(x, y+vspeed) vspeed = 0}
     }
     
     selected = true;
+    control.activeEntity = id;
 
 }
 </string>
@@ -302,6 +307,9 @@ if(selected){
     draw_circle(x,y,50,0);
 
 }
+
+draw_set_colour(c_black);
+draw_text(x,y,ownedBy);
 </string>
           </argument>
         </arguments>
