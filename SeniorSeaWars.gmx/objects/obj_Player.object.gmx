@@ -68,9 +68,6 @@ ownedBy = 0;
             <kind>1</kind>
             <string>if (speed &gt; maxspeed)
     speed = maxspeed;
-    
-if (!place_meeting(x, y, obj_RoughTerrain))
-    maxspeed = 4 else maxspeed = 1;
 
 if (keyboard_check(ord('W'))) 
 {
@@ -188,6 +185,29 @@ if(selected){
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_RoughTerrain">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>maxspeed = 2;
 </string>
           </argument>
         </arguments>
