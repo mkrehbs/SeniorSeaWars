@@ -15,7 +15,20 @@ switch(control.gameState){
         }
     break;
     case 3:
-        scr_ChooseFirstTurn();
+        with(instance_create(x,y,obj_Message)){
+        text = string("Player "+string(scr_ChooseFirstTurn())+" is going first!");
+        };
+    break;
+    case 4:
+        //player 1 turn
+        scr_NextTurn();
+    break;
+    case 5:         //loop between 4 and 5 until win or battle scene
+        //player 2 turn
+        scr_NextTurn();
+    break;
+    case 6:
+        //battle scene
     break;
     
     
