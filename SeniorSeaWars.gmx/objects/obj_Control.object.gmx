@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -27,14 +27,19 @@
             <kind>1</kind>
             <string>///make the main menu
 
+globalvar control;
+control = id;
+
 instance_create(x,y,obj_MainMenu);
 
 //variables
 
-startGame = false;
+gameState = 0;
+gameStatePrevious = gameState;
 
-numberOfPlayersPerTeam = 8;
-startKey = vk_space;
+numberOfPlayersPerTeam = noone;
+
+debugging = true;
 
 </string>
           </argument>
@@ -58,7 +63,39 @@ startKey = vk_space;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>startGame = false;
+            <string>if(gameState != gameStatePrevious){
+
+    gameStatePrevious = gameState;
+    scr_GameStateExec();//using "gameState" in this script
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///debugging
+
+if(debugging){
+
+show_debug_message(gameState);
+
+}
 </string>
           </argument>
         </arguments>

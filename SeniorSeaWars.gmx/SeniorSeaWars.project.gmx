@@ -41,6 +41,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_GameStateExec.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_Player</object>
     <object>objects\obj_Barrier</object>
