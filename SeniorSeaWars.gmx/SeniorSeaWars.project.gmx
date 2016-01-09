@@ -5,7 +5,20 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Players">
+      <sprites name="Old Men">
+        <sprite>sprites\spr_Boxer</sprite>
+        <sprite>sprites\spr_Weak</sprite>
+        <sprite>sprites\spr_DeVuto</sprite>
+      </sprites>
+      <sprites name="Sea">
+        <sprite>sprites\spr_Blob</sprite>
+        <sprite>sprites\spr_GobShark</sprite>
+        <sprite>sprites\spr_Crab</sprite>
+      </sprites>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
