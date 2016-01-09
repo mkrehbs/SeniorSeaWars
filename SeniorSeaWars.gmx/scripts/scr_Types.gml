@@ -1,6 +1,9 @@
 switch(argument0){
 
-    case 1: break;
+    if()
+    
+    
+    case 1: return  break;
     case 2: break;
     case 3: break;
 

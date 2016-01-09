@@ -48,6 +48,9 @@
     </scripts>
     <script>scripts\scr_Types.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_Game</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_Player</object>
     <object>objects\obj_Barrier</object>
