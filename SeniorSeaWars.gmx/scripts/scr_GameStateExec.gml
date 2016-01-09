@@ -20,10 +20,12 @@ switch(control.gameState){
         };
     break;
     case 4:
+        control.turn = true;
         scr_PlayerTurn(1);
     break;
     case 5:         //loop between 4 and 5 until win or battle scene
         //player 2 turn
+        control.turn = true;
         scr_PlayerTurn(2);
     break;
     case 6:

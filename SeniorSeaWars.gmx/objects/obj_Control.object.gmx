@@ -122,7 +122,8 @@ if(gameState != gameStatePrevious){
 
 if(debugging){
 
-show_debug_message(gameState);
+//show_debug_message(gameState);
+show_debug_message(activePlayer);
 
 }
 </string>
@@ -178,16 +179,16 @@ else{
     if(room_get_name(id) != "rm_menu"){
     
         if(mouse_x &lt;= view_xview[0] + 10){
-            view_xview[0]--;
+            view_xview[0]-=10;
         }
         if(mouse_x &gt;= view_xview[0]+view_wview[0] - 10){
-            view_xview++;
+            view_xview+=10;
         }
         if(mouse_y &lt;= view_yview[0] + 10){
-            view_yview--;
+            view_yview-=10;
         }
         if(mouse_y &gt;= view_yview[0]+view_hview[0] - 10){
-            view_yview++;
+            view_yview+=10;
         }    
     }
 
@@ -246,6 +247,38 @@ if(win){
 if(turn){
 
     //
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///right click to free roam
+
+if(turn){
+
+    if(mouse_check_button_pressed(mb_right)){
+        activeEntity = 0;
+        with(obj_Player){
+            selected = false;
+        }
+    }
 
 }
 </string>

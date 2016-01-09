@@ -1,9 +1,17 @@
+turn = true;
+
+with(obj_Player){
+    selected = false;    
+}
+
 whatPlayer = argument0;
 activePlayer = whatPlayer;
 
+tempid = control.lastPlayerTouched[activePlayer];
 
+view_xview = tempid.x - (view_wview[0]/2);
+view_yview = tempid.y - (view_hview[0]/2);
 
-turn = true;
 selected = 0;
 activeEntity = 0;
 
