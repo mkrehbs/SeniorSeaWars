@@ -32,6 +32,10 @@ instance_create(x,y,obj_MainMenu);
 //variables
 
 startGame = false;
+
+numberOfPlayersPerTeam = 8;
+startKey = vk_space;
+
 </string>
           </argument>
         </arguments>
