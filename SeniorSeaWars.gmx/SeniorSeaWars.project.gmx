@@ -38,6 +38,10 @@
         <sprite>sprites\spr_Rough</sprite>
       </sprites>
     </sprites>
+    <sprites name="Items">
+      <sprite>sprites\spr_ProsLeg</sprite>
+      <sprite>sprites\spr_Base</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_sand</background>
@@ -68,10 +72,12 @@
     <object>objects\obj_SpawnPoint</object>
     <object>objects\obj_Coral</object>
     <object>objects\obj_Rock</object>
+    <object>objects\obj_BaseP1</object>
+    <object>objects\obj_BaseP2</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_testing</room>
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_testing</room>
     <room>rooms\rm_game</room>
   </rooms>
   <help>
