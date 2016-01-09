@@ -1,6 +1,11 @@
-for(i = 0; i < numberOfPlayersPerTeam; i++){
+with(instance_create(x,y,obj_SpawnPoint)){
 
-    //player[1,i];
-    //player[2,i];
+    player = 1;
+
+}
+
+with(instance_create(x,y,obj_SpawnPoint)){
+
+    player = 2;
 
 }

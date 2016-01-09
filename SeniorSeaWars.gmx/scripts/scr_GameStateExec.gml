@@ -4,7 +4,15 @@ switch(control.gameState){
     
     
     case 1:
-        scr_PopulateMap();
+    scr_PopulateMap();
+        with(instance_create(x,y,obj_PlacePlayers)){
+            player = 1;
+        }
+    break;
+    case 2:
+        with(instance_create(x,y,obj_PlacePlayers)){
+            player = 2;
+        }
     break;
     
     
