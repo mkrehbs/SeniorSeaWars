@@ -8,6 +8,13 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_Player</object>
+    <object>objects\obj_Barrier</object>
+    <object>objects\obj_RoughTerrain</object>
+    <object>objects\obj_Control</object>
+    <object>objects\object4</object>
+  </objects>
   <help>
     <rtf>help.rtf</rtf>
   </help>
