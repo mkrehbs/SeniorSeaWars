@@ -39,6 +39,10 @@ startCoord_x = x;
 startCoord_y = y;
 endCoord_x = x;
 endCoord_y = y;
+
+selected = true;//false;
+idd = 0;
+
 </string>
           </argument>
         </arguments>
@@ -98,19 +102,55 @@ if (keyboard_check(ord('D')))
         hspeed += speedinc;
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Measuring distance trav.
 
-if (keyboard_check(ord('R')))
-{
-    endCoord_x = x;
-    endCoord_y = y;
-    fuelUsed = point_distance(startCoord_x, startCoord_y, endCoord_x, endCoord_y);
+if(selected){
+
+    if(moving == false){
+    
+        startCoord_x = x;
+        startCoord_y = y;
+        moving = true;
+    
+    }
+    
+    //show_debug_message(string(point_distance(x,y,startCoord_x,startCoord_y)));
+    
+    /*
+    if (keyboard_check(ord('R')))
+    {
+        endCoord_x = x;
+        endCoord_y = y;
+        fuelUsed = point_distance(startCoord_x, startCoord_y, endCoord_x, endCoord_y);
+    }
+    
+    if (keyboard_check(ord('F')))
+        show_message(fuelUsed);
+    
+    startCoord_x = endCoord_x;
+    startCoord_y = endCoord_y;
+    */
 }
-
-if (keyboard_check(ord('F')))
-    show_message(fuelUsed);
-
-startCoord_x = endCoord_x;
-startCoord_y = endCoord_y;
 </string>
           </argument>
         </arguments>
