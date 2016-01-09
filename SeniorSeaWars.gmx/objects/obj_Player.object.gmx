@@ -68,6 +68,9 @@ ownedBy = 0;
             <kind>1</kind>
             <string>if (speed &gt; maxspeed)
     speed = maxspeed;
+    
+if (!place_meeting(x, y, obj_RoughTerrain))
+    maxspeed = 4 else maxspeed = 2;
 
 if (keyboard_check(ord('W'))) 
 {
