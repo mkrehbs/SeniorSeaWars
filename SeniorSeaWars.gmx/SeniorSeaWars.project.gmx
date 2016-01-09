@@ -43,6 +43,10 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_GameStateExec.gml</script>
+    <scripts name="Game States">
+      <script>scripts\scr_PopulateMap.gml</script>
+    </scripts>
+    <script>scripts\scr_Types.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_Player</object>

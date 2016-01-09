@@ -4,9 +4,7 @@ switch(control.gameState){
     
     
     case 1:
-    //if(room_get_name(room) == "rm_game"){
-       // show_message("GOOD");
-   // }
+        scr_PopulateMap();
     break;
     
     
