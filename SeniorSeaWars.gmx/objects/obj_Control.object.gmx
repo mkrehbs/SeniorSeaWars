@@ -65,6 +65,9 @@ shake = 0;
 
 turn = false;
 selected = 0;
+
+lastPlayerTouched[1] = 0;
+lastPlayerTouched[2] = 0;
 </string>
           </argument>
         </arguments>

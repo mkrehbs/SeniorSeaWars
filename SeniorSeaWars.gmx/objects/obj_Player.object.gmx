@@ -275,6 +275,7 @@ if !place_free(x, y+vspeed) vspeed = 0}
     
     selected = true;
     control.activeEntity = id;
+    control.lastPlayerTouched[control.activePlayer] = id;
 
 }
 </string>
