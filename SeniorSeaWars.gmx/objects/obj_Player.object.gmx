@@ -25,10 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>maxspeed = 4;
+            <string>moving = false;
+moving2 = false;
+
+maxspeed = 4;
 speedinc = 2;
 friction = 1.2;
 hp = 1;
+
+fuelUsed = 0;
+
+startCoord_x = x;
+startCoord_y = y;
+endCoord_x = x;
+endCoord_y = y;
 </string>
           </argument>
         </arguments>
@@ -55,13 +65,84 @@ hp = 1;
     speed = maxspeed;
 
 if (keyboard_check(ord('W'))) 
-    vspeed -= speedinc;
+{
+    moving = true;
+    if (moving != moving2)
+    {
+        vspeed -= speedinc;
+    }
+}
 if (keyboard_check(ord('A'))) 
-    hspeed -= speedinc;
+{
+    moving = true;
+    if (moving != moving2)
+    {
+        hspeed -= speedinc;
+    }
+}
 if (keyboard_check(ord('S')))
-    vspeed += speedinc;
+{
+    moving = true;
+    if (moving != moving2)
+    {
+        vspeed += speedinc;
+    }
+    moving = true;
+
+}
 if (keyboard_check(ord('D')))
-    hspeed += speedinc;
+{
+    moving = true;
+    if (moving != moving2)
+    {
+        hspeed += speedinc;
+    }
+}
+
+if (keyboard_check(ord('R')))
+{
+    endCoord_x = x;
+    endCoord_y = y;
+    fuelUsed = point_distance(startCoord_x, startCoord_y, endCoord_x, endCoord_y);
+}
+
+if (keyboard_check(ord('F')))
+    show_message(fuelUsed);
+
+startCoord_x = endCoord_x;
+startCoord_y = endCoord_y;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Base">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (control.activePlayer)
+{
+    if (control.activePlayer = 1)
+        control.win = control.activePlayer;
+    
+    if (control.activePlayer = 2)
+        control.win = control.activePlayer;
+}
+
+
 
 </string>
           </argument>
