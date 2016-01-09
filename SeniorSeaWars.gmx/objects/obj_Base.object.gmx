@@ -31,7 +31,7 @@
         control.win = control.activePlayer;
     
     if (control.activePlayer = 2)
-        control.win = 
+        control.win = control.activePlayer;
 }
 
 
