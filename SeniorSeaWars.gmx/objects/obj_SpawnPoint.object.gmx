@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -52,7 +52,7 @@ highlight = false;
             <string>if(highlight){
 
     draw_set_colour(make_colour_rgb(random(255),random(255),random(255)));
-    draw_circle(x,y,500,1);
+    draw_circle(x,y,control.spawnDist,0);
 
 }
 </string>
