@@ -37,7 +37,7 @@ instance_create(x,y,obj_MainMenu);
 gameState = 0;
 gameStatePrevious = gameState;
 
-numberOfPlayersPerTeam = noone;
+numberOfPlayersPerTeam = 7;
 
 playerSide[1] = 1;
 playerSide[2] = 2;
@@ -50,6 +50,10 @@ fuel = 100;
 
 
 debugging = true;
+
+    viewdist = 1;
+    viewx2 = view_xview;
+    viewy2 = view_yview;
 
 </string>
           </argument>
@@ -73,7 +77,9 @@ debugging = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(gameState != gameStatePrevious){
+            <string>///run game state
+
+if(gameState != gameStatePrevious){
 
     gameStatePrevious = gameState;
     scr_GameStateExec();//using "gameState" in this script
@@ -104,6 +110,53 @@ debugging = true;
 if(debugging){
 
 show_debug_message(gameState);
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///camera
+
+if(activeEntity){
+
+    viewdist = control.viewdist
+    viewx2 = control.viewx2;
+    viewy2 = control.viewy2;
+    
+    control.x = activeEntity.x;
+    control.y = activeEntity.y;
+    
+    viewx = ((activeEntity.x-view_wview[0]/2)*(viewdist-1)+(mouse_x-view_wview[0]/2))/viewdist;
+    viewy = ((activeEntity.y-view_hview[0]/2)*(viewdist-1)+(mouse_y-view_hview[0]/2))/viewdist;
+    viewx2 = viewx2-(viewx2-viewx)*0.4;
+    viewy2 = viewy2-(viewy2-viewy)*0.4;
+    
+    view_xview[0] = viewx2+random(control.shake)-shake/2;
+    view_yview[0] = viewy2+random(control.shake)-shake/2;
+    
+    if (shake &gt; 10){
+    shake *= 0.8}
+    if( shake &gt; 0){
+    shake -= 1}
+    else{
+    shake = 0;}
 
 }
 </string>

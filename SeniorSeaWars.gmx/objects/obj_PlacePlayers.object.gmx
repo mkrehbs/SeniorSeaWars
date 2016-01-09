@@ -7,7 +7,111 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>player = 0;
+spawn = 0;
+spawnx = 0;
+spawny = 0;
+
+numPlayersPlaced = 0;
+numPlayersNeeded = control.numberOfPlayersPerTeam;
+
+needSpawn = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(player){
+
+    needSpawn = false;
+    
+    with(obj_SpawnPoint){
+    
+        if(player == other.player){
+        
+            highlight = true; //make sure to turn off
+            
+            other.spawn = id;
+            other.spawnx = x;
+            other.spawny = y;
+        
+        }
+    
+    }
+
+}
+
+if(!needSpawn){
+
+    control.activeEntity = spawn;
+    
+    if(numPlayersPlaced &lt; numPlayersNeeded){
+    
+        if(keyboard_check_pressed(ord('A'))){
+            scr_MakePlayer(1,player,spawnx,spawny);
+            numPlayersPlaced++;
+        }
+        if(keyboard_check_pressed(ord('S'))){
+            scr_MakePlayer(2,player,spawnx,spawny);
+            numPlayersPlaced++;
+        }
+        if(keyboard_check_pressed(ord('D'))){
+            scr_MakePlayer(3,player,spawnx,spawny);
+            numPlayersPlaced++;
+        }
+    
+    }
+    else{
+    
+        obj_SpawnPoint.highlight = false;
+        control.activeEntity = 0;
+        control.gameState++;
+        instance_destroy();
+    
+    }
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

@@ -50,6 +50,7 @@
       <script>scripts\scr_PopulateMap.gml</script>
     </scripts>
     <script>scripts\scr_Types.gml</script>
+    <script>scripts\scr_MakePlayer.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_Game</font>
