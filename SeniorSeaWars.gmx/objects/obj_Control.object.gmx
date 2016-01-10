@@ -34,10 +34,10 @@ instance_create(x,y,obj_MainMenu);
 
 //variables
 
-spawnx[1] = 64;
-spawny[1] = 64;
-spawnx[2] = 960;
-spawny[2] = 1984;
+spawnx[1] = 480;
+spawny[1] = 288;
+spawnx[2] = 512;
+spawny[2] = 1728;
 
 gameState = 0;
 gameStatePrevious = gameState;
