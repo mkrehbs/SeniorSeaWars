@@ -72,7 +72,7 @@ alarm[0] = room_speed * 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(text);
+            <string>//show_debug_message(text);
 </string>
           </argument>
         </arguments>

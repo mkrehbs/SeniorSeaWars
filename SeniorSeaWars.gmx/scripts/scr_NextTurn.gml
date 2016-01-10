@@ -9,4 +9,16 @@ else{
     game_end();
 }
 
+//ehh below
+
+if(random(100) < 2){
+
+    with(instance_create(x,y,obj_Message)){
+    
+        text = "We want our LEG!!!!"
+    
+    }
+
+}
+
 
