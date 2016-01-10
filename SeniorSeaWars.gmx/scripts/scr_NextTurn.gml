@@ -15,7 +15,8 @@ if(random(100) < 2){
 
     with(instance_create(x,y,obj_Message)){
     
-        text = "We want our LEG!!!!"
+        text = "insert easter egg here"
+        time = 0.5;
     
     }
 

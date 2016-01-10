@@ -7,6 +7,13 @@ with(obj_Player){
 whatPlayer = argument0;
 activePlayer = whatPlayer;
 
+with(instance_create(x,y,obj_Message)){
+    
+        text = "Player "+string(control.activePlayer)+"!!!";
+        time = 1;
+    
+    }
+
 tempid = control.lastPlayerTouched[activePlayer];
 
 view_xview = tempid.x - (view_wview[0]/2);

@@ -1,6 +1,7 @@
 show_debug_message("flipping coin...");
 randomize();
 choice = choose(1,2);
+show_debug_message(string("result: "+string(choice)));
 if(choice == 2){
     control.gameState = 5;
     view_xview = control.spawnx[2] - (view_wview[0]/2);

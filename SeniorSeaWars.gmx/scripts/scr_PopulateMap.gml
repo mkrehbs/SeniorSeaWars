@@ -1,3 +1,5 @@
+//make spawn points, info gathered from control obj: create
+
 with(instance_create(control.spawnx[1],control.spawny[1],obj_SpawnPoint)){
 
     player = 1;

@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_Song1</sound>
+    <sound>sound\snd_Song2</sound>
+    <sound>sound\snd_Song3</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Players">
       <sprites name="Old Men">
@@ -61,6 +65,7 @@
     <script>scripts\scr_NextTurn.gml</script>
     <script>scripts\scr_PlayerTurn.gml</script>
     <script>scripts\scr_MatchUp.gml</script>
+    <script>scripts\scr_StartRandomSound.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_Game</font>

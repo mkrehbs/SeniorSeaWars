@@ -52,7 +52,7 @@ highlight = false;
             <string>if(highlight){
 
     draw_set_colour(make_colour_rgb(random(255),random(255),random(255)));
-    draw_circle(x,y,control.spawnDist,0);
+    draw_circle(x,y,control.spawnDist,1);
 
 }
 </string>

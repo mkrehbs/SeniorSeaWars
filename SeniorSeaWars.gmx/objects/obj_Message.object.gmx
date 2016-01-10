@@ -26,7 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>text = "";
-alarm[0] = room_speed * 3;
+time = 3;
+timeSet = false;
+
 </string>
           </argument>
         </arguments>
@@ -73,6 +75,13 @@ alarm[0] = room_speed * 3;
           <argument>
             <kind>1</kind>
             <string>//show_debug_message(text);
+
+if(!timeSet){
+
+    alarm[0] = room_speed * time;
+    timeSet = true;
+
+}
 </string>
           </argument>
         </arguments>
