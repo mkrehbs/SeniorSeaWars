@@ -56,7 +56,7 @@ playerSide[2] = 2;
 activeEntity = 0;
 activePlayer = 0;
 
-drawFuel = true;//false;
+drawFuel = false;
 fuel = 100;
 
 debugging = true;
@@ -220,12 +220,27 @@ else{
             <kind>1</kind>
             <string>///check for win
 
+if(playersOnTeam[1] == 0){win = 2;}
+if(playersOnTeam[2] == 0){win = 1;}
+
 if(win){
 
-    show_message("GAME IS OVER :D");
-    show_message(win);
-    game_restart();
+    turn = false;
+    //drawFuel = false;
 
+    //show_message("GAME IS OVER :D");
+    //show_message(win);
+    //game_restart();
+    
+    if(!instance_exists(obj_Message)){
+    
+        with(instance_create(x,y,obj_Message)){
+        
+            text = string("Player " +string(control.win) + " is the winner!");
+            time = 6000;
+        
+        }
+    }
 }
 </string>
           </argument>
@@ -348,6 +363,38 @@ if(fuel &lt; 1){
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///check for draw fuel
+
+if(turn){
+
+    drawFuel = true;
+
+}
+else{
+
+    drawFuel = false;
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -366,7 +413,7 @@ if(fuel &lt; 1){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(drawFuel){
+            <string>if(drawFuel &amp;&amp; gameState != 6){
 
         startx = view_xview;    
         finalx = (view_xview+view_wview)-10;

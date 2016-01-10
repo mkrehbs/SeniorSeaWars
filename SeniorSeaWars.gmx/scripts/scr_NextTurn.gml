@@ -1,3 +1,13 @@
+//make sure to stop the player movement!
+
+with(obj_Player){
+
+    speed = 0;
+
+}
+
+////////////////////////////////////////////////////
+
 if(activePlayer == 1){
     gameState = 5;
 }
