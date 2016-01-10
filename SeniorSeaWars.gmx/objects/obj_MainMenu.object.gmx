@@ -38,8 +38,10 @@ alarm[0] = whackOutTime;
 buttonText[1] = "Play";
 buttonText[2] = "Options";
 buttonText[3] = "Credits";
+buttonText[4] = "Tutorial";
+buttonText[5] = "Quit";
+numberOfButtons = 5;
 
-numberOfButtons = 3;
 selected = 1;
 counter = 0;
 
@@ -294,6 +296,45 @@ else{
     draw_text(view_xview[0]+5,view_yview[0]+88+200,buttonText[3]);
 
 }
+
+if(selected == 4){
+
+draw_set_colour(c_yellow);
+draw_text(view_xview[0]+irandom_range(-4,4)+5,view_yview[0]+random_range(-4,4)+112+200,buttonText[4]);
+draw_set_colour(c_white);
+draw_text(view_xview[0]+irandom_range(-2,2)+5,view_yview[0]+random_range(-2,2)+112+200,buttonText[4]);
+draw_set_colour(c_blue);
+draw_text(view_xview[0]+5,view_yview[0]+112+200,buttonText[4]);
+
+}
+
+else{
+
+    draw_set_colour(c_blue);
+    draw_text(view_xview[0]+5,view_yview[0]+112+200,buttonText[4]);
+
+}
+
+
+if(selected == 5){
+
+draw_set_colour(c_yellow);
+draw_text(view_xview[0]+irandom_range(-4,4)+5,view_yview[0]+random_range(-4,4)+136+200,buttonText[5]);
+draw_set_colour(c_white);
+draw_text(view_xview[0]+irandom_range(-2,2)+5,view_yview[0]+random_range(-2,2)+136+200,buttonText[5]);
+draw_set_colour(c_blue);
+draw_text(view_xview[0]+5,view_yview[0]+136+200,buttonText[5]);
+
+}
+
+else{
+
+    draw_set_colour(c_blue);
+    draw_text(view_xview[0]+5,view_yview[0]+136+200,buttonText[5]);
+
+}
+
+////////// fx
 
 scale = choose(1,1,1,1,1,1,1,1,1,1,3,3,10)
 draw_set_colour(c_white);

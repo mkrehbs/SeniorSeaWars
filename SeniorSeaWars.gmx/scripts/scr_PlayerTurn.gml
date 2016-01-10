@@ -1,4 +1,5 @@
 turn = true;
+control.fuel = 100;
 
 with(obj_Player){
     selected = false;    
@@ -14,7 +15,24 @@ with(instance_create(x,y,obj_Message)){
     
     }
 
-tempid = control.lastPlayerTouched[activePlayer];
+if(instance_exists(control.lastPlayerTouched[activePlayer])){
+    
+    tempid = control.lastPlayerTouched[activePlayer];
+
+}
+else{
+
+    with(obj_SpawnPoint){
+    
+        if(player == other.activePlayer){
+        
+            control.tempid = id;
+        
+        }
+    
+    }
+
+}
 
 view_xview = tempid.x - (view_wview[0]/2);
 view_yview = tempid.y - (view_hview[0]/2);

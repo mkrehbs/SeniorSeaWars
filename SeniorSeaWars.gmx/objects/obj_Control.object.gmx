@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -47,13 +47,16 @@ spawnDist = 250;
 
 numberOfPlayersPerTeam = 7;
 
+playersOnTeam[1] = numberOfPlayersPerTeam;
+playersOnTeam[2] = numberOfPlayersPerTeam;
+
 playerSide[1] = 1;
 playerSide[2] = 2;
 
 activeEntity = 0;
 activePlayer = 0;
 
-drawFuel = false;
+drawFuel = true;//false;
 fuel = 100;
 
 debugging = true;
@@ -318,6 +321,33 @@ if(soundsStarted){
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///check for empty fuel
+
+if(fuel &lt; 1){
+
+    scr_NextTurn();
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -338,9 +368,40 @@ if(soundsStarted){
             <kind>1</kind>
             <string>if(drawFuel){
 
-    //draw the fuel bar here
+        startx = view_xview;    
+        finalx = (view_xview+view_wview)-10;
+        barlength = finalx-startx;
+
+        draw_set_colour(c_black);
+        draw_rectangle(startx + 10, view_yview + 10 , finalx, view_yview + 25,0);
+        draw_set_colour(c_red);
+        draw_rectangle(startx + 10, view_yview + 10 , startx+(barlength*(fuel/100)) , view_yview + 25,0);
+    
 
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>game_restart();
 </string>
           </argument>
         </arguments>

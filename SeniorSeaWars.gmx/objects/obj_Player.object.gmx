@@ -132,6 +132,14 @@ ownedBy = 0;
             <kind>1</kind>
             <string>///Measuring distance trav.
 
+if(speed &gt; 2){
+
+    control.fuel-=0.5;
+
+}
+
+/*
+
 if(selected){
 
     if(moving == false){
@@ -140,7 +148,7 @@ if(selected){
         startCoord_y = y;
         moving = true;
     
-    }
+    }  */
     
     //show_debug_message(string(point_distance(x,y,startCoord_x,startCoord_y)));
     
@@ -158,7 +166,7 @@ if(selected){
     startCoord_x = endCoord_x;
     startCoord_y = endCoord_y;
     */
-}
+//}
 </string>
           </argument>
         </arguments>
@@ -272,6 +280,12 @@ if !place_free(x, y+vspeed) vspeed = 0}
 
 x += 0.1*(x - other.x)
 y += 0.1*(y - other.y)
+
+if(other.ownedBy != ownedBy){
+
+    scr_MatchUp(other.id,id);
+
+}
 </string>
           </argument>
         </arguments>
