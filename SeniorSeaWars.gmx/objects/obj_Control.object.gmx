@@ -123,7 +123,7 @@ if(gameState != gameStatePrevious){
 if(debugging){
 
 //show_debug_message(gameState);
-show_debug_message(activePlayer);
+//show_debug_message(activePlayer);
 
 }
 </string>

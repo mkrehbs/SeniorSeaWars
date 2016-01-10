@@ -323,17 +323,17 @@ if !place_free(x, y+vspeed) vspeed = 0}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>if(selected){
 
-if(selected){
-
-    draw_set_colour(c_yellow);
-    draw_circle(x,y,50,0);
+    draw_set_colour(c_black);
+    draw_sprite_ext(sprite_index,0,x+irandom_range(-1,1),y+irandom_range(-1,1),1,1,0,c_black,1);
 
 }
 
-draw_set_colour(c_black);
-draw_text(x,y,ownedBy);
+draw_self();
+
+//draw_set_colour(c_black);
+//draw_text(x,y,ownedBy);
 </string>
           </argument>
         </arguments>

@@ -2,6 +2,7 @@ type = argument0;
 player = argument1;
 spawnx = argument2;
 spawny = argument3;
+idd = argument4;
 
 if(point_distance(mouse_x,mouse_y,spawnx,spawny) < control.spawnDist){
 
@@ -11,6 +12,9 @@ if(point_distance(mouse_x,mouse_y,spawnx,spawny) < control.spawnDist){
         type = other.type;
         ownedBy = other.player;
         control.lastPlayerTouched[ownedBy] = id;
+        idd = other.idd;
+        sprite_index = scr_Types(type,idd);
+        obj_PlacePlayers.numPlayersPlaced++;
     
     }
 
